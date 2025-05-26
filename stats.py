@@ -17,3 +17,18 @@ def get_num_chars(book_path):
                 char_count[char] = 1   
         return char_count
     
+def sort_on(char_count):
+    return char_count["num"]
+
+def get_ordered_list(char_count):
+    ordered_list = []
+    for char in char_count:
+        ordered_list.append({"char": char, "num": char_count[char]})
+    ordered_list.sort(reverse=True, key=sort_on)
+    return ordered_list
+
+
+
+  
+    
+        
